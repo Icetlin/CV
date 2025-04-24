@@ -5,6 +5,7 @@
     --text-color: #2c3e50;
     --border-radius: 8px;
     --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --section-spacing: 3rem;
 }
 
 * {
@@ -28,20 +29,43 @@ body {
 
 .header {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: var(--section-spacing);
+    padding: 2rem 0;
+    border-bottom: 2px solid var(--secondary-color);
 }
 
 .header h1 {
     font-size: 2.5rem;
     color: var(--primary-color);
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
-.skills {
+.subtitle {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+section {
     background: white;
     padding: 2rem;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
+    margin-bottom: var(--section-spacing);
+}
+
+section h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+}
+
+.profile p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
 }
 
 .skill-level {
@@ -66,16 +90,57 @@ body {
     padding: 0.5rem 1rem;
     border-radius: 20px;
     font-size: 0.9rem;
-    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .skill-tag:hover {
     transform: translateY(-2px);
+    background-color: #2980b9;
+}
+
+.experience-item, .project-item {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.experience-item:last-child, .project-item:last-child {
+    border-bottom: none;
+}
+
+.experience-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.experience-period {
+    color: var(--secondary-color);
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.experience-details {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+}
+
+.experience-details li {
+    margin-bottom: 0.5rem;
+}
+
+.project-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.project-item p {
+    color: #555;
+    line-height: 1.6;
 }
 
 .footer {
     text-align: center;
-    margin-top: 3rem;
+    margin-top: var(--section-spacing);
     padding: 1rem;
     color: var(--text-color);
     opacity: 0.7;
@@ -93,5 +158,17 @@ body {
     .skill-tag {
         padding: 0.4rem 0.8rem;
         font-size: 0.8rem;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
     }
 } 
