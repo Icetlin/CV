@@ -6,6 +6,7 @@
     <title>Ilia Ledovskoi - Professional Resume</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -22,6 +23,9 @@
                 <a href="https://github.com/Icetlin" target="_blank" class="contact-link">
                     <i class="fab fa-github"></i> GitHub
                 </a>
+                <button id="downloadPdf" class="contact-link">
+                    <i class="fas fa-file-pdf"></i> Download PDF
+                </button>
             </div>
         </header>
 
@@ -161,5 +165,19 @@
             <p>© 2024 | Professional Resume</p>
         </footer>
     </div>
+    <script>
+        document.getElementById('downloadPdf').addEventListener('click', function() {
+            const element = document.querySelector('.container');
+            const opt = {
+                margin: 1,
+                filename: 'Ilia_Ledovskoi_Resume.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+            };
+
+            html2pdf().set(opt).from(element).save();
+        });
+    </script>
 </body>
 </html> 
