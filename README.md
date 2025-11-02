@@ -1,23 +1,25 @@
-# Резюме
+# Professional Resume
 
-Этот репозиторий содержит мое резюме, размещенное на GitHub Pages.
+This repository contains my professional resume hosted on GitHub Pages.
 
-## Структура проекта
+## Project Structure
 
-- `index.html` - основная страница резюме
-- `styles.css` - стили для страницы
+- `index.html` - main resume page
+- `styles.css` - page styling
 
-## Технологии
+## Technologies
 
 - HTML5
 - CSS3
 - GitHub Pages
+- Font Awesome
+- html2pdf.js
 
-## Как просмотреть
+## View Online
 
-Резюме доступно по адресу: [https://your-username.github.io/resume](https://your-username.github.io/resume)
+The resume is available at: [https://icetlin.github.io/CV](https://icetlin.github.io/CV)
 
-## Локальный запуск
+## Local Development
 
-1. Клонируйте репозиторий
-2. Откройте файл `index.html` в браузере 
+1. Clone the repository
+2. Open `index.html` in your browser 
